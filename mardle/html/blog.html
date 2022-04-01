@@ -1,0 +1,97 @@
+{include file=common/head.html}
+<!-- Blog Section Start Here -->
+<div class="blog-section pt-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-12 order-lg-2">
+                <div class="row mb-n10">
+                    {pboot:list num=4 order='date desc,id desc'}
+                    <div class="col-sm-6 mb-10">
+                        <!-- Single Blog Post Start -->
+                        <div class="single-blog-post-wrap" data-aos="fade-up" data-aos-delay="200">
+                            <div class="blog-thumbnail">
+                                <a href="[list:link]"><img class="fit-image" src="[list:ico]" alt="Blog Thumb"><img class="btn-plus" src="https://htmldemo.hasthemes.com/busing/busing/assets/images/icon/plus.svg" alt="Plus Icons"></a>
+                            </div>
+                            <div class="blog-post-details pt-5">
+                                <h3 class="title"><a href="[list:link]">{pboot:if([list:istop])}<span class="badge badge-danger">置顶</span>&nbsp;{/pboot:if}{pboot:if([list:isrecommend])}<span class="badge badge-warning">推荐</span>&nbsp;{/pboot:if}{pboot:if([list:isheadline])}<span class="badge badge-success">头条</span>&nbsp;{/pboot:if}[list:title]</a></h3>
+                                <div class="post-meta mb-3 mt-3"><a href="#"><i class="fa fa-user"></i>&nbsp;[list:author]</a><span><i class="fa fa-clock-o"></i>&nbsp;[list:date style=Y年m月d日]</span></div>
+                                <p class="desc-content mb-2 mb-md-5">[list:content drophtml=1 lencn=50]</p>
+                                <a href="[list:link]" class="btn btn-hover-primary read-more">阅读全文</a> </div>
+                        </div>
+                        <!-- Single Blog Post End -->
+                    </div>
+                    {/pboot:list}
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <!-- Pagination Area Start Here -->
+                        <ul class="pagination mt-10 pt-10 border-top d-flex justify-content-center">
+                            <li><a href="{page:pre}" class="prev"><i class="fa fa-angle-left"></i></a></li>
+                            {page:numbar}
+                            <li><a href="{page:next}" class="next"><i class="fa fa-angle-right"></i></a></li>
+                        </ul>
+
+                        <!-- Pagination Area End Here -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 order-lg-1">
+                <div class="sidebar-wrap">
+                    <!--Sidebar Search Start-->
+                    <div class="sidebar" data-aos="fade-up" data-aos-delay="200">
+                        <div class="sidebar-search">
+                            <form action="#">
+                                <input placeholder="搜索文章..." type="text">
+                                <button><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <!--Sidebar Search End-->
+                    <!--Sidebar Category Start-->
+                    <div class="sidebar" data-aos="fade-up" data-aos-delay="300">
+                        <h4 class="sidebar-title">分类</h4>
+                        <ul class="sidebar-link">
+                            {pboot:if('{sort:scode}' == '{sort:tcode}')} {pboot:nav parent={sort:scode}}
+                            <li {pboot:2if( '[nav:scode]'=='{sort:scode}' )}style="color: #122179;" {/pboot:2if}><a href="[nav:link]">[nav:name]&nbsp;<span>{pboot:sort scode=[nav:scode]}([sort:rows]){/pboot:sort}</span></a></li>
+                            {/pboot:nav} {else} {pboot:nav parent={sort:tcode}}
+                            <li {pboot:2if( '[nav:scode]'=='{sort:scode}' )}style="color: #122179;" {/pboot:2if}><a href="[nav:link]">[nav:name]&nbsp;<span>{pboot:sort scode=[nav:scode]}([sort:rows]){/pboot:sort}</span></a></li>
+                            {/pboot:nav} {/pboot:if}
+                        </ul>
+                    </div>
+                    <!--Sidebar Category End-->
+                    <!--Sidebar Post Start-->
+                    <div class="sidebar" data-aos="fade-up" data-aos-delay="400">
+                        <h4 class="sidebar-title">随机推荐</h4>
+                        <ul class="sidebar-blog">
+                            {pboot:list order=random num=3 scode={sort:scode}}
+                            <li>
+                                <a href="[list:link]" class="image"><img src="[list:ico]" alt="[list:title]"></a>
+                                <div class="content"><a class="title" href="[list:link]">[list:title]</a><span class="date">[list:date style=Y年m月d日]</span></div>
+                            </li>
+                            {/pboot:list}
+                        </ul>
+                    </div>
+                    <!--Sidebar Post End-->
+                    <!--Sidebar Tags Start-->
+                    <div class="sidebar" data-aos="fade-up" data-aos-delay="500">
+                        <h4 class="sidebar-title">标签</h4>
+                        <div class="sidebar-tags">
+                            {pboot:tags scode={sort:scode}}
+                            <a href="[tags:link]">[tags:text]</a> {/pboot:tags}
+                        </div>
+                    </div>
+                    <!--Sidebar Tags End-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // var page_bar = document.querySelectorAll('.page-bar');
+    // var style = 'background-color:#122179;color:#FFF;';
+    // var now_page = '{page:current}' - 1;
+    // page_bar[now_page].style = style;
+    // page_bar[now_page].href = 'javascript:;';
+</script>
+<!-- Blog Section End Here -->
+{include file=common/foot.html}

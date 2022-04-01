@@ -1,0 +1,122 @@
+<!-- Support Section Start Here -->
+<div class="support-area bg-light pt-90 pb-90 mt-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="support-wrapper" data-aos="fade-up" data-aos-delay="300">
+                    <div class="section-title text-center">
+                        <h1 class="title">合作项目</h1>
+                        <p class="mt-5 mb-5 pb-3">公司多年来致力专注于网站建设，软件开发，系统开发，模板制作，域名主机和网络营销等服务项目</p>
+                    </div>
+                    {pboot:sort scode={label:contact_id} num=1}
+                    <div class="support-button"><a class="btn btn-dark btn-hover-primary" href="[sort:link]">联系我们</a></div>
+                    {/pboot:sort}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Support Section End Here -->
+<!-- Footer Section Start Here -->
+<footer class="footer-section pt-90">
+    <div class="footer-widget-area">
+        <div class="container container-default custom-area">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-custom">
+                    <div class="single-footer-widget m-0" data-aos="fade-up" data-aos-delay="300" data-aos-anchor-placement="bottom bottom">
+                        <div class="footer-logo pb-3">
+                            <a href="index.html"><img src="{label:logo_dark}" alt="Logo Image"></a>
+                        </div>
+                        <p class="desc-content pt-3 pb-3">{pboot:companyother}</p>
+                        <!-- Soclial Link Start -->
+                        <div class="widget-social pt-4">
+                            <a href="" title="微博"><i class="fa fa-weibo" aria-hidden="true"></i></a>
+                            <a href="" title="公众号"><i class="fa fa-weixin" aria-hidden="true"></i></a>
+                            <a href="" title="QQ"><i class="fa fa-qq" aria-hidden="true"></i></a>
+                            <a href="" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </div>
+                        <!-- Social Link End -->
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-custom">
+                    <div class="single-footer-widget" data-aos="fade-up" data-aos-delay="400" data-aos-anchor-placement="bottom bottom">
+                        <h2 class="widget-title">站内链接</h2>
+                        <ul class="widget-list pt-3">
+                            {pboot:nav parent={label:footer_label1}}
+                            <li><a href="[nav:link]">[nav:name]</a></li>
+                            {/pboot:nav}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 col-lg-2 col-custom">
+                    <div class="single-footer-widget" data-aos="fade-up" data-aos-delay="500" data-aos-anchor-placement="bottom bottom">
+                        <h2 class="widget-title">快捷导航</h2>
+                        <ul class="widget-list pt-3">
+                            <li><a href="/">首页</a></li>
+                            {pboot:nav scode={label:footer_label2}}
+                            <li><a href="[nav:link]">[nav:name]</a></li>
+                            {/pboot:nav}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-custom">
+                    <div class="single-footer-widget" data-aos="fade-up" data-aos-delay="600" data-aos-anchor-placement="bottom bottom">
+                        <h2 class="widget-title">联系方式</h2>
+                        <div class="widget-body pt-3">
+                            <p class="desc-content pb-3">
+                                联系电话：{pboot:companyphone}
+                                <br> 企业邮箱：{pboot:companyemail}
+                                <br> 工作时间：9:00-17:00(除周日)
+                            </p>
+                            <div class="newsletter-form-wrap pt-4">
+                                <form id="mc-form" class="mc-form d-flex position-relative">
+                                    <input type="email" id="mc-email" class="form-control email-box rounded-0" placeholder="example@example.com" name="EMAIL">
+                                    <button id="mc-submit" class="btn newsletter-btn position-absolute" type="submit"><i class="fa fa-envelope"></i></button>
+                                </form>
+                                <!-- mailchimp-alerts Start -->
+                                <div class="mailchimp-alerts text-centre">
+                                    <div class="mailchimp-submitting"></div>
+                                    <!-- mailchimp-submitting end -->
+                                    <div class="mailchimp-success text-success"></div>
+                                    <!-- mailchimp-success end -->
+                                    <div class="mailchimp-error text-danger"></div>
+                                    <!-- mailchimp-error end -->
+                                </div>
+                                <!-- mailchimp-alerts end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright-area pt-5 border-top mt-90 mb-5">
+        <div class="container custom-area">
+            <div class="row">
+                <div class="col-12 text-center col-custom">
+                    <div class="sponsor-content">
+                        <a href="https://cloud.tencent.com/" title="腾讯云 - 产业智变 云启未来" target="_blank" rel="nofollow"><img src="{pboot:sitetplpath}/images/logo/tencent.svg" style="height: 1.0em;"></a>&nbsp;&nbsp;
+                        <a href="https://www.aliyun.com/" title="阿里云-上云就上阿里云" target="_blank" rel="nofollow"><img src="{pboot:sitetplpath}/images/logo/aliyun.png" style="height: 1.0em; "></a>&nbsp;&nbsp;
+                        <a href="https://bt.cn/" title="宝塔面板 - 简单好用的Linux/Windows服务器运维管理面板" target="_blank" rel="nofollow"><img src="{pboot:sitetplpath}/images/logo/baota.svg" style="height: 3em; "></a>
+                        <a href="https://www.yundun.com/" title="「YUNDUN」安全加速_智能守护-DDoS防御_游戏盾_高防IP_SCDN_WAF" target="_blank" rel="nofollow"><img src="{pboot:sitetplpath}/images/logo/yundun.svg" style="height:1.5em; margin-left:5px" /></a>
+                    </div>
+                    <div class="copyright-content">
+                        <p class="mb-0">Copyright &copy;
+                            <?=date('Y');?> <a href="#">{pboot:companyname}</a>&nbsp;All Rights Reserved.</p>
+                        <p class="mb-0"><a href="https://beian.miit.gov.cn/">{pboot:siteicp}</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Section End Here -->
+<!-- Scroll Top Start Here --><a href="#" class="scroll-top" id="scroll-top"><i class="arrow-top fa fa-angle-double-up"></i><i class="arrow-bottom fa fa-angle-double-up"></i></a>
+
+<script src="{pboot:sitetplpath}/js/vendor/vendor.min.js"></script>
+<script src="{pboot:sitetplpath}/js/plugins/plugins.min.js"></script>
+<!--Main JS-->
+<script src="{pboot:sitetplpath}/js/main.js"></script>
+</body>
+
+</html>
