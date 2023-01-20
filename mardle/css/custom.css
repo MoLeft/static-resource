@@ -33,6 +33,43 @@
     border-color: #4cae4c;
 }
 
+/* only xs */
+@media only screen and (max-width:767px) {}
+
+/* sm and up */
+@media only screen and (min-width:768px) {}
+
+/* sm only */
+@media only screen and (min-width:768px) and (max-width:991px) {}
+
+/* sm and down */
+@media only screen and (max-width:991px) {
+    
+}
+
+/* md and up */
+@media only screen and (min-width:992px) {
+    
+}
+
+/* md only */
+@media only screen and (min-width:992px) and (max-width:1199px) {}
+
+/* md and down */
+@media only screen and (max-width:1199px) {}
+
+/* lg and up */
+@media only screen and (min-width:1200px) {}
+
+/* lg only */
+@media only screen and (min-width:1200px) and (max-width:1919px) {}
+
+/* lg and down */
+@media only screen and (max-width:1919px) {}
+
+/* xl and up */
+@media only screen and (min-width:1920px) {}
+
 ::-webkit-scrollbar {
     width: 8px;
     height: 10px;
